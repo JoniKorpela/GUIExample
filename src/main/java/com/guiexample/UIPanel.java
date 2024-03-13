@@ -6,13 +6,11 @@ import java.awt.*;
 
 public class UIPanel extends JPanel{
     
-    public UIPanel(){
+    public UIPanel(Dimension dimension, Color color){
         
-
-        this.setBorder(BorderFactory.createEmptyBorder(30, 30, 10, 30));
-
-        this.setPreferredSize(new Dimension(30, 30));
-        this.setBackground(Color.white);
+        this.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 30));
+        this.setPreferredSize(dimension);
+        this.setBackground(color);
         this.setFocusable(true);
 
 

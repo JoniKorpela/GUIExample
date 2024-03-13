@@ -9,6 +9,6 @@ public class UIFrame extends JFrame{
         this.pack();
         this.setVisible(true);
         this.setLocationRelativeTo(null);
-        setSize(400, 600);
+        setSize(400, 400);
     }
 }

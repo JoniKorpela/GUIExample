@@ -4,7 +4,7 @@ import java.awt.BorderLayout;
 
 import javax.swing.JButton;
 import javax.swing.JLabel;
-
+import java.awt.*;
 public class GUIExample{
 
     public static void main(String[] args) {
@@ -13,16 +13,17 @@ public class GUIExample{
     }
 
     public GUIExample(){
-
         
-        UIPanel panel = new UIPanel();
+        UIPanel panel = new UIPanel(new Dimension(200, 200), Color.white);
+        UIPanel panel2 = new UIPanel(new Dimension(200, 200), Color.GRAY);
         UIFrame frame = new UIFrame();
-        CounterLabel label = new CounterLabel(30, 30, 30, 30, "Click count:");
-        OpButton button = new OpButton(30, 30, 30, 30, "Click me", label);
-        panel.add(button);
+        CounterLabel label = new CounterLabel(new Dimension(100, 50), "Click count: 0");
+        OpButton button = new OpButton(new Dimension(100, 50), "Click me", label);
+        panel2.add(button);
         panel.add(label);
-    
-        frame.add(panel, BorderLayout.CENTER);
+
+        frame.add(panel2, BorderLayout.CENTER);
+        frame.add(panel, BorderLayout.NORTH);
     }
     
 }

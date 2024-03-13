@@ -1,5 +1,6 @@
 package com.guiexample;
 
+import java.awt.Dimension;
 import java.awt.event.*;  
 import javax.swing.JButton;
 
@@ -7,9 +8,9 @@ public class OpButton extends JButton implements ActionListener{
 
     CounterLabel label;
 
-    OpButton(int x, int y, int width, int height, String text, CounterLabel label){
+    OpButton(Dimension dimension, String text, CounterLabel label){
         super(text);
-        setBounds(x, y, width, height);
+        this.setPreferredSize(dimension);
         addActionListener(this);
         this.label = label;
     }

@@ -1,14 +1,17 @@
 package com.guiexample;
 
+import java.awt.Color;
+import java.awt.Dimension;
+
 import javax.swing.JLabel;
 
 public class CounterLabel extends JLabel {
     
     int count = 0;
 
-    CounterLabel(int x, int y, int width, int height, String text) {
+    CounterLabel(Dimension dimension, String text) {
         super(text);
-        setBounds(x, y, width, height);
+        setPreferredSize(new Dimension(100, 50));
     }
 
     public void incrementLabel(){
