@@ -18,4 +18,8 @@ public class CounterLabel extends JLabel {
         count++;
         setText("Click count = " + count);
     }
+
+    public int getCount(){
+        return count;
+    }
 }
